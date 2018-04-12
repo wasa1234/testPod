@@ -15,6 +15,6 @@ node {
         echo lastStageName
     } finally {
         echo "FINALLY"
-        echo lastStageName
+        echo `git rev-parse --abbrev-ref HEAD`
     }
 }
