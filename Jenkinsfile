@@ -15,6 +15,7 @@ node {
         echo lastStageName
     } finally {
         echo "FINALLY"
+        echo lastStageName
         echo getGitBranchName()
     }
 }
