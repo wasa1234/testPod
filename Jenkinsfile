@@ -16,5 +16,10 @@ node {
     } finally {
         echo "FINALLY"
         echo lastStageName
+        echo getGitBranchName()
     }
+}
+
+def getGitBranchName() {
+    return scm.branches[0].name
 }
