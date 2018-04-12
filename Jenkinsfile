@@ -15,6 +15,10 @@ node {
         echo lastStageName
     } finally {
         echo "FINALLY"
-        echo `git rev-parse --abbrev-ref HEAD`
+        echo getGitBranchName()
     }
+}
+
+def getGitBranchName() {
+    return scm.branches[0].name
 }
